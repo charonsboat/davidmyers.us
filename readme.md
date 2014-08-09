@@ -35,7 +35,7 @@ SOFTWARE.
 
 ##install application
 
-First, you need to get the application from GitHub:
+First, you need to run a few commands:
 
 ```
 git clone https://github.com/drmyersii/davidmyers.us.git www
