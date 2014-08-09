@@ -1,0 +1,7 @@
+# directories to ignore
+/public/blog
+/vendor
+
+# files to ignore
+composer.lock
+.env.php
