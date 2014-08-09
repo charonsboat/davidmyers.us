@@ -35,8 +35,14 @@ SOFTWARE.
 
 ##install application
 
+First, you need to get the application from GitHub:
+
 ```
 git clone https://github.com/drmyersii/davidmyers.us.git www
 cd www
 composer install
 ```
+
+Next, copy the ```.env.default.php``` into a new file called ```.env.php``` and 
+fill it with your website credentials. Make sure your server root is pointing 
+to ```www/public``` and you should be good to go!
