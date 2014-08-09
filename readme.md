@@ -43,6 +43,6 @@ cd www
 composer install
 ```
 
-Next, copy the ```.env.default.php``` into a new file called ```.env.php``` and 
+Next, copy ```.env.default.php``` into a new file called ```.env.php``` and 
 fill it with your website credentials. Make sure your server root is pointing 
 to ```www/public``` and you should be good to go!
