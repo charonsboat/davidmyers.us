@@ -8,15 +8,6 @@ This repository houses my personal website, portfolio, and blog.
 David Myers [drmyersii]
 
 
-###install application
-
-```
-git clone https://github.com/drmyersii/davidmyers.us.git www
-cd www
-composer install
-```
-
-
 ##license
 
 The MIT License (MIT)
@@ -40,3 +31,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+##install application
+
+```
+git clone https://github.com/drmyersii/davidmyers.us.git www
+cd www
+composer install
+```
