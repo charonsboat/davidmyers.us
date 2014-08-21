@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'KcdjH7652$!hsjkafdsjkfdks*73j3jd',
+	'key' => $_ENV['config.encryption_key'],
 
 	/*
 	|--------------------------------------------------------------------------

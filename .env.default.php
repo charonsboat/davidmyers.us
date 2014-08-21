@@ -3,21 +3,22 @@
 return array(
 
 	// Store all sensitive data in these environment files.
-	'GITHUB' => array(
+	// General Config Options
+	'config.encryption_key' => '',
 
-		'API_ACCESS_TOKEN' => '',
-		'CLIENT_ID' => '',
-		'CLIENT_SECRET' => '',
-		'USERNAME' => ''
-	),
-	'MAIL' => array(
+	// GitHub Config Options
+	'github.api_access_token' => '',
+	'github.client_id' => '',
+	'github.client_secret' => '',
+	'github.username' => '',
 
-		'DRIVER' => '',
-		'HOST' => '',
-		'PORT' => 0,
-		'FROM' => '',
-		'ENCRYPTION' => '',
-		'USERNAME' => '',
-		'PASSWORD' => ''
-	)
+	// Mail Server Config Options
+	'mail.driver' => '',
+	'mail.host' => '',
+	'mail.port' => 0,
+	'mail.from.address' => '',
+	'mail.from.name' => '',
+	'mail.encryption' => '',
+	'mail.username' => '',
+	'mail.password' => ''
 );

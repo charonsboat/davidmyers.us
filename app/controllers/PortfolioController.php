@@ -9,10 +9,10 @@ class PortfolioController extends BaseController {
 	{
 		$GitHub = new GitHub(
 			
-			$_ENV['GITHUB']['API_ACCESS_TOKEN'],
-			$_ENV['GITHUB']['CLIENT_ID'],
-			$_ENV['GITHUB']['CLIENT_SECRET'],
-			$_ENV['GITHUB']['USERNAME']
+			$_ENV['github.api_access_token'],
+			$_ENV['github.client_id'],
+			$_ENV['github.client_secret'],
+			$_ENV['github.username']
 		);
 
 		$data = array(

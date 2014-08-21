@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => $_ENV['MAIL']['DRIVER'],
+	'driver' => $_ENV['mail.driver'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => $_ENV['MAIL']['HOST'],
+	'host' => $_ENV['mail.host'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => $_ENV['MAIL']['PORT'],
+	'port' => $_ENV['mail.port'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => $_ENV['MAIL']['FROM'],
+	'from' => array('address' => $_ENV['mail.from.address'], 'name' => $_ENV['mail.from.name']),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'encryption' => $_ENV['MAIL']['ENCRYPTION'],
+	'encryption' => $_ENV['mail.encryption'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => $_ENV['MAIL']['USERNAME'],
+	'username' => $_ENV['mail.username'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => $_ENV['MAIL']['PASSWORD'],
+	'password' => $_ENV['mail.password'],
 
 	/*
 	|--------------------------------------------------------------------------
