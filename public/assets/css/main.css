@@ -124,6 +124,10 @@ a
 	{
 		float: right;
 	}
+	.social-network-feed .network-timestamp
+	{
+		font-weight: bold;
+	}
 
 .none
 {

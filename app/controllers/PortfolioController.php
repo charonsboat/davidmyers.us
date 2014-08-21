@@ -19,7 +19,7 @@ class PortfolioController extends BaseController {
 
 			'github' => array(
 
-				'data' => $GitHub->fetchData(), 
+				'data' => $GitHub->fetchData(),
 				'base_url' => $GitHub->fetchBaseUrl()
 			)
 		);
