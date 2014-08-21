@@ -1,5 +1,8 @@
 @section('main')
 
+<section id="landing">
+
+</section>
 <section>
 	<header>
 		<h2>A little about myself...</h2>
@@ -25,8 +28,8 @@
 				<li>Javascript / jQuery</li>
 				<li>Ajax</li>
 			</ul>
-		</div>
-		<div class="node">
+		</div><!--
+		--><div class="node">
 			<h3>Back End</h3>
 			<ul>
 				<li>PHP / MySQL</li>
@@ -34,8 +37,8 @@
 				<li>Database Relational Mapping</li>
 				<li>Custom Software Development</li>
 			</ul>
-		</div>
-		<div class="node">
+		</div><!--
+		--><div class="node">
 			<h3>Frameworks / Libraries</h3>
 			<ul>
 				<li>Laravel 4</li>

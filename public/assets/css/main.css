@@ -6,11 +6,10 @@ html
 
 body
 {
-	background: url('/assets/images/tile-light-alt.jpg');
 	background-color: #fff;
 	color: #312d2a;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
-	height: calc(100% - 3rem);
+	height: 100%;
 }
 
 form
@@ -37,7 +36,6 @@ textarea
 
 button
 {
-	background: url('/assets/images/tile-blue.jpg');
 	background-color: #207f94;
 	border: 1px solid #207f94;
 	color: #fff;
@@ -59,6 +57,7 @@ label
 h1, h2, h3, h4, h5, h6
 {
 	color: #207f94;
+	text-align: center;
 }
 
 h1
@@ -99,6 +98,7 @@ a
 	.menu-icon div
 	{
 		background-color: #fff;
+		border-radius: 1px;
 		height: 0.25rem
 	}
 	.menu-icon div:first-child, .menu-icon div.first-child
@@ -150,8 +150,7 @@ a
 /* ########## Document Header ########## */
 body > header
 {
-	background: url('/assets/images/tile-blue.jpg');
-	background-color: #207f94;
+	background-color: rgba(32, 127, 148, 0.0);
 	min-height: 3rem;
 	left: 0;
 	line-height: 3rem;
@@ -186,11 +185,12 @@ body > header a
 
 body > header > nav
 {
-	height: 0;
+	max-height: 0;
 	margin: 0 1rem;
 	opacity: 0;
 	overflow: hidden;
 	text-align: center;
+	/*transition: max-height 0.5s ease-out 0.1s, opacity 0.1s ease-out;*/
 }
 	body > header > nav ul
 	{
@@ -198,8 +198,8 @@ body > header > nav
 	}
 	body > header > nav a
 	{
-		background: url('/assets/images/tile-dark-alt.jpg');
-		background-color: #312d2a;
+		background-color: rgba(30, 30, 30, 0.5);
+		border-radius: 2px;
 		display: block;
 		height: 2.5rem;
 		letter-spacing: 0.125rem;
@@ -207,6 +207,13 @@ body > header > nav
 		margin-bottom: 0.5rem;
 		text-transform: lowercase;
 	}
+
+body > header > nav.open
+{
+	max-height: 30rem;
+	opacity: 1;
+	/*transition: max-height 1s ease-out, opacity 0.1s ease-in 0.3s;*/
+}
 
 body > header .menu-icon
 {
@@ -218,7 +225,6 @@ body > header .menu-icon
 body > main
 {
 	height: 100%;
-	margin-top: 3rem;
 	text-align: center;
 }
 
@@ -230,6 +236,15 @@ body > main > article, body > main > section
 	overflow: hidden;
 	padding: 0 1rem;
 	text-align: center;
+}
+
+body > main > section#landing
+{
+	background: url('null') center center;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	overflow: hidden;
 }
 
 body > main > article .arrow-down, body > main > section .arrow-down
@@ -245,7 +260,6 @@ body > main > article .arrow-down, body > main > section .arrow-down
 body > main > article:nth-child(even), body > main > section:nth-child(even), 
 body > main > article.even, body > main > section.even
 {
-	background: url('/assets/images/tile-dark-alt.jpg');
 	background-color: #312d2a;
 	color: #fff;
 }
@@ -300,10 +314,6 @@ body > main > article.even pre, body > main > section.even
 	{
 		height: 100%;
 	}
-	body
-	{
-		margin-left: 12rem;
-	}
 
 	body > header
 	{
@@ -324,25 +334,36 @@ body > main > article.even pre, body > main > section.even
 
 	body > header > nav
 	{
-		height: auto;
 		margin: 0 1rem;
+		max-height: none;
 		opacity: 1;
 		overflow: hidden;
 		text-align: center;
 	}
 
-	body > main
-	{
-		margin-top: 0;
-	}
-
 	body > main > article, body > main > section
 	{
 		padding: 0 10%;
+		text-align: left;
+	}
+
+	body > main > article > header, body > main > article > div, body > main > article footer, 
+	body > main > section > header, body > main > section > div, body > main > section > footer
+	{
+		margin: auto;
+		max-width: 60rem;
 	}
 
 	.menu-icon
 	{
 		display: none;
+	}
+
+	.node
+	{
+		display: inline-block;
+		margin: 0 1.65%;
+		vertical-align: top;
+		width: 30%;
 	}
 }

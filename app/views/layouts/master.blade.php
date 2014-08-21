@@ -7,10 +7,16 @@
 	<meta charset="utf-8" name="viewport" content="width=device-width, user-scalable=no">
 	<title>David Myers{{{ isset($title) ? ' | '.$title : null }}}</title>
 
-	{{ HTML::style('/assets/vendor/css/reset.css') }}
-	{{ HTML::style('/assets/css/main.css') }}
-	{{ $customCss or null }}
-	{{ HTML::script('/assets/vendor/js/modernizr-2.8.2.min.js') }}
+	@if (file_exists(public_path('assets/css/production.css')))
+		{{ HTML::style('assets/css/production.css') }}
+	@else
+		{{ HTML::style('assets/vendor/css/reset.css') }}
+		{{ HTML::style('assets/css/main.css') }}
+		{{ $customCss or null }}
+	@endif
+
+	<!-- This script will always be loaded separately to inspect the client before page load. -->
+	{{ HTML::script('assets/vendor/js/modernizr-2.8.2.min.js') }}
 </head>
 <body>
 	<!--[if lt IE 9]>
@@ -27,7 +33,7 @@
 		</div>
 		<nav>
 			<ul>
-				<!-- <li><a href="/">Home</a></li> -->
+				<li><a href="/">Home</a></li>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/contact-me">Contact Me</a></li>
@@ -37,12 +43,14 @@
 	<main>
 		@yield('main')
 	</main>
-	{{ HTML::script('/assets/vendor/js/jquery-1.11.0.min.js') }}
-	{{ HTML::script('/assets/vendor/js/selectivizr-1.0.2.min.js') }}
-	{{ HTML::script('/assets/js/plugins.js') }}
-	{{ HTML::script('/assets/js/main.js') }}
-	{{ $customJs or null }}
-
-	<!-- Need to make minified scripts -->
+	@if (file_exists(public_path('assets/js/production.js')))
+		{{ HTML::script('assets/js/production.js') }}
+	@else
+		{{ HTML::script('assets/vendor/js/jquery-1.11.0.min.js') }}
+		{{ HTML::script('assets/vendor/js/selectivizr-1.0.2.min.js') }}
+		{{ HTML::script('assets/js/plugins.js') }}
+		{{ HTML::script('assets/js/main.js') }}
+		{{ $customJs or null }}
+	@endif
 </body>
 </html>
