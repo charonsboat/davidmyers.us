@@ -240,7 +240,7 @@ body > main > article, body > main > section
 
 body > main > section#landing
 {
-	background: url('null') center center;
+	background: url('/assets/images/workspace-900p.jpg') center center;
 	background-attachment: fixed;
 	background-size: cover;
 	height: 100%;
