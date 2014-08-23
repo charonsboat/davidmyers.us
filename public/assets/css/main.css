@@ -7,7 +7,7 @@ html
 body
 {
 	background-color: #fff;
-	color: #312d2a;
+	color: #121212;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	height: 100%;
 }
@@ -26,7 +26,7 @@ input, textarea
 }
 	input:focus, textarea:focus
 	{
-		border: 1px solid #207f94;
+		border: 1px solid #444;
 	}
 
 textarea
@@ -36,8 +36,8 @@ textarea
 
 button
 {
-	background-color: #207f94;
-	border: 1px solid #207f94;
+	background-color: #444;
+	border: 1px solid #444;
 	color: #fff;
 	font-size: 100%;
 	max-width: 100%;
@@ -56,7 +56,8 @@ label
 
 h1, h2, h3, h4, h5, h6
 {
-	color: #207f94;
+	color: #444;
+	margin: 1em 0;
 	text-align: center;
 }
 
@@ -82,7 +83,7 @@ li.formal
 
 a
 {
-	color: #207f94;
+	color: #444;
 	font-weight: bold;
 }
 
@@ -112,7 +113,7 @@ a
 
 .social-network-feed
 {
-	border: 1px solid #207f94;
+	border: 1px solid #444;
 	margin-bottom: 0.5rem;
 	padding: 0.5rem;
 }
@@ -150,76 +151,61 @@ a
 /* ########## Document Header ########## */
 body > header
 {
-	background-color: rgba(32, 127, 148, 0.0);
-	min-height: 3rem;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	color: #444;
+	height: 4rem;
+	line-height: 4rem;
+	position: relative;
+}
+
+body > header.locked
+{
 	left: 0;
-	line-height: 3rem;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 9999;
-}
-
-body > header > div
-{
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
 }
 
 body > header h1
 {
-	font-size: 1.75rem;
-	margin: 0 1rem;
+	color: inherit;
 }
-	body > header h1 a
-	{
-		letter-spacing: -0.0625rem;
-	}
 
 body > header a
 {
-	color: #fff;
+	color: inherit;
 	font-weight: normal;
+	letter-spacing: 1px;
+	margin: 0 1em;
 }
 
-body > header > nav
+body > header #title
 {
-	max-height: 0;
-	margin: 0 1rem;
-	opacity: 0;
-	overflow: hidden;
-	text-align: center;
-	/*transition: max-height 0.5s ease-out 0.1s, opacity 0.1s ease-out;*/
+	height: inherit;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
 }
-	body > header > nav ul
-	{
-		margin-bottom: 1rem;
-	}
-	body > header > nav a
-	{
-		background-color: rgba(30, 30, 30, 0.5);
-		border-radius: 2px;
-		display: block;
-		height: 2.5rem;
-		letter-spacing: 0.125rem;
-		line-height: 2.5rem;
-		margin-bottom: 0.5rem;
-		text-transform: lowercase;
-	}
 
-body > header > nav.open
+body > header nav.nav-left
 {
-	max-height: 30rem;
-	opacity: 1;
-	/*transition: max-height 1s ease-out, opacity 0.1s ease-in 0.3s;*/
+	float: left;
+	z-index: 200;
 }
 
-body > header .menu-icon
+body > header nav.nav-right
 {
-	margin: 0 1rem;
+	float: right;
+	z-index: 200;
 }
 
+body > header nav li
+{
+	display: inline-block;
+}
 
 /* ########## Main Content ########## */
 body > main
@@ -230,9 +216,9 @@ body > main
 
 body > main > article, body > main > section
 {
-	color: #312d2a;
+	background-color: #fff;
 	letter-spacing: 0;
-	min-height: 50%;
+	min-height: calc(100% - 4rem);
 	overflow: hidden;
 	padding: 0 1rem;
 	text-align: center;
@@ -244,13 +230,18 @@ body > main > section#landing
 	background-attachment: fixed;
 	background-size: cover;
 	height: 100%;
+	left: 0;
 	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
 }
 
 body > main > article .arrow-down, body > main > section .arrow-down
 {
 	border: 2rem solid transparent;
-	border-top: 1.75rem solid #312d2a;
+	border-top: 1.75rem solid #444;
 	border-bottom-width: 0;
 	display: block;
 	margin: 1rem auto;
@@ -260,20 +251,37 @@ body > main > article .arrow-down, body > main > section .arrow-down
 body > main > article:nth-child(even), body > main > section:nth-child(even), 
 body > main > article.even, body > main > section.even
 {
-	background-color: #312d2a;
-	color: #fff;
+	background-color: #f4f4f4;
+}
+
+article:nth-child(even) h1, section:nth-child(even) h1, 
+article.even h1, section.even h1,
+article:nth-child(even) h2, section:nth-child(even) h2, 
+article.even h2, section.even h2,
+article:nth-child(even) h3, section:nth-child(even) h3, 
+article.even h3, section.even h3,
+article:nth-child(even) h4, section:nth-child(even) h4, 
+article.even h4, section.even h4,
+article:nth-child(even) h5, section:nth-child(even) h5, 
+article.even h5, section.even h5,
+article:nth-child(even) h6, section:nth-child(even) h6, 
+article.even h6, section.even h6,
+article:nth-child(even) a, section:nth-child(even) a, 
+article.even a, section.even a
+{
+	color: #444;
 }
 
 body > main > article:nth-child(even) .arrow-down, body > main > section:nth-child(even) .arrow-down, 
 body > main > article.even .arrow-down, body > main > section.even .arrow-down
 {
-	border-top: 1.75rem solid #fff;
+	border-top: 1.75rem solid #444;
 }
 
 body > main > article > header h2, body > main > section > header h2
 {
-	font-weight: normal;
-	margin: 0;
+	font-weight: bold;
+	margin: 1em 0;
 	padding: 1rem;
 }
 
@@ -317,13 +325,9 @@ body > main > article.even pre, body > main > section.even
 
 	body > header
 	{
-		height: 100%;
-		left: 0;
-		line-height: 3rem;
-		position: fixed;
-		top: 0;
-		width: 12rem;
-		z-index: 9999;
+		bottom: 0;
+		top: auto;
+		z-index: 200;
 	}
 
 	body > header h1

@@ -23,18 +23,20 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 	<header>
-		<div>
-			<h1 id="title"><a href="/">David Myers</a></h1>
-			<div class="menu-icon">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		</div>
-		<nav>
+		<!-- <div class="menu-icon">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div> -->
+		<h1 id="title"><a href="/">David Myers</a></h1>
+		<nav class="nav-left">
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/blog">Blog</a></li>
+			</ul>
+		</nav>
+		<nav class="nav-right">
+			<ul>
 				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/contact-me">Contact Me</a></li>
 			</ul>
