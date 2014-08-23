@@ -89,8 +89,8 @@ a
 
 .menu-icon
 {
-	height: 1.25rem;
-	width: 1.4rem;
+	margin: 1.5625rem;
+	width: 1.5rem;
 }
 	.menu-icon:hover
 	{
@@ -98,9 +98,8 @@ a
 	}
 	.menu-icon div
 	{
-		background-color: #fff;
-		border-radius: 1px;
-		height: 0.25rem
+		background-color: #444;
+		height: 0.125rem
 	}
 	.menu-icon div:first-child, .menu-icon div.first-child
 	{
@@ -157,6 +156,7 @@ body > header
 	height: 4rem;
 	line-height: 4rem;
 	position: relative;
+	z-index: 200;
 }
 
 body > header.locked
@@ -183,28 +183,24 @@ body > header a
 body > header #title
 {
 	height: inherit;
+	left: 0;
 	margin: 0;
 	padding: 0;
 	position: absolute;
+	top: 0;
 	width: 100%;
 	z-index: -1;
 }
 
-body > header nav.nav-left
+body > header .menu-icon
 {
 	float: left;
-	z-index: 200;
+	line-height: 4rem;
 }
 
-body > header nav.nav-right
+body > header nav
 {
-	float: right;
-	z-index: 200;
-}
-
-body > header nav li
-{
-	display: inline-block;
+	display: none;
 }
 
 /* ########## Main Content ########## */
@@ -316,33 +312,33 @@ body > main > article.even pre, body > main > section.even
 	}
 }
 
-@media screen and (min-width: 600px), screen and (orientation: landscape)
+@media screen and (min-width: 700px)
 {
 	html, body
 	{
 		height: 100%;
 	}
 
-	body > header
+	body > header > nav
 	{
-		bottom: 0;
-		top: auto;
+		display: inline-block;
+	}
+
+	body > header nav.nav-left
+	{
+		float: left;
 		z-index: 200;
 	}
 
-	body > header h1
+	body > header nav.nav-right
 	{
-		margin: auto auto 2rem auto;
-		text-align: center;
+		float: right;
+		z-index: 200;
 	}
 
-	body > header > nav
+	body > header nav li
 	{
-		margin: 0 1rem;
-		max-height: none;
-		opacity: 1;
-		overflow: hidden;
-		text-align: center;
+		display: inline-block;
 	}
 
 	body > main > article, body > main > section
