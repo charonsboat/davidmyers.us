@@ -101,8 +101,13 @@ $(document).ready(function ()
 
 	$(window).resize(function ()
 	{
-		height = window.innerHeight - rem(4);
-		distance = height;
+		var newHeight = window.innerHeight - rem(4);
+		
+		if (newHeight < height)
+		{
+			height = newHeight;
+			distance = height;
+		}
 
 		setHeader();
 	});
