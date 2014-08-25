@@ -50,38 +50,73 @@ $(document).ready(function ()
 		// });
 	}
 
-	var body = $('body');
-	var header = $('body > header');
-	var height = (window.innerHeight - rem(4));
-
-	header.css({
-		'margin-top' : height
-	});
-
-	var distance = header.offset().top;
-
-	$(window).scroll(function ()
+	var isLocked = function(element)
 	{
-		var headerHasClass = header.hasClass('locked')
+		if (element.hasClass('locked'))
+			return true;
+		else
+			return false;
+	}
+
+	var setTopMargin = function (element, amount)
+	{
+		element.css('margin-top', amount);
+	}
+
+	var setHeader = function()
+	{
 		if ($(this).scrollTop() >= distance)
 		{
-			if (!headerHasClass)
+			if (!isLocked(header))
 			{
 				header.addClass('locked');
-				header.css('margin-top', 0);
 
+				header.css('margin-top', 0);
 				body.css('margin-top', (height + rem(4)));
 			}
 		}
 		else
 		{
-			if (headerHasClass)
+			if (isLocked(header))
 			{
 				header.removeClass('locked');
+
 				header.css('margin-top', height);
 				body.css('margin-top', 0);
 			}
+			else if (header.css('margin-top') != height)
+			{
+				header.css('margin-top', height);
+			}
 		}
+	}
+
+	var body = $('body');
+	var header = $('body > header');
+	var windowHeight = window.innerHeight;
+	var height = (windowHeight - rem(4));
+	var distance = height;
+
+	setTopMargin(header, height);
+
+	$(window).resize(function ()
+	{
+		height = window.innerHeight - rem(4);
+		distance = height;
+
+		setHeader();
+	});
+
+	$(window).scroll(function ()
+	{
+		setHeader();
+
+		var landing = $('#landing');
+		var scrollTop = $(this).scrollTop();
+		var landingHeight = landing.height();
+
+		//landing.css('height', (height + (scrollTop / 3)));
+		landing.css('top', (-1 * (scrollTop / 15)));
 	});
 
 	// On click, toggle menu open/close
