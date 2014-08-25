@@ -124,7 +124,7 @@ $(document).ready(function ()
 		var scrollTop = $(this).scrollTop();
 
 		//landing.css('height', (height + (scrollTop / 3)));
-		landing.css('top', (-1 * (scrollTop / 15)));
+		landing.css('top', (-1 * (scrollTop / 10)));
 	});
 
 	// On click, toggle menu open/close
