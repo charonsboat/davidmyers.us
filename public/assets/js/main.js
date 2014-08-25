@@ -97,6 +97,11 @@ $(document).ready(function ()
 	var height = (windowHeight - rem(4));
 	var distance = height;
 
+	var landing = $('#landing');
+	var landingHeight = landing.height();
+
+	landing.css('height', landingHeight);
+
 	setTopMargin(header, height);
 
 	$(window).resize(function ()
@@ -116,9 +121,7 @@ $(document).ready(function ()
 	{
 		setHeader();
 
-		var landing = $('#landing');
 		var scrollTop = $(this).scrollTop();
-		var landingHeight = landing.height();
 
 		//landing.css('height', (height + (scrollTop / 3)));
 		landing.css('top', (-1 * (scrollTop / 15)));
