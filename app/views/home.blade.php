@@ -8,7 +8,7 @@
 		<h2>A little about myself...</h2>
 	</header>
 	<div>
-		<p>Hello. I'm David. I'm a developer based in <a href="https://www.google.com/maps/place/Columbus,+Ohio">Columbus, Ohio</a>. I'm a full stack engineer that specializes in designing responsive, mobile-first, scalable web applications. I constantly work with current technologies such as jQuery, Modernizr and Sass. I follow the latest standards such as HTML5 and CSS3. I also understand that following standards doesn't mean dropping support, and I can very effectively support backwards compatibility for older browsers.</p>
+		<p>Hello. I'm David. I'm a developer based in <a href="https://www.google.com/maps/place/Columbus,+Ohio">Columbus, Ohio</a>. I'm a full stack engineer that specializes in designing responsive, mobile-first, scalable web applications. I constantly work with current technologies such as jQuery, Modernizr and Sass, and I follow the latest standards such as HTML5 and CSS3. I also understand that following standards doesn't mean dropping support, and I can very effectively support backwards compatibility for older browsers.</p>
 	</div>
 	<footer>
 		<div class="arrow-down js-scroll-next"></div>
