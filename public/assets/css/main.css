@@ -129,6 +129,23 @@ a
 		font-weight: bold;
 	}
 
+.module
+{
+	background-color: #ddffee;
+	border-radius: 4px;
+	padding: 1rem;
+}
+
+.node
+{
+	background-color: #66cc99;
+	border-radius: 4px;
+	color: #fff;
+	margin: 0 0 1rem 0;
+	min-height: 15rem;
+	overflow: auto;
+}
+
 .none
 {
 	display: none !important;
@@ -152,20 +169,13 @@ body > header
 {
 	background-color: #fff;
 	border-bottom: 1px solid #eee;
+	border-top: 0.25rem solid #66cc99;
 	color: #444;
-	height: 4rem;
-	line-height: 4rem;
+	height: 3.75rem;
+	line-height: 3.75rem;
 	overflow: hidden;
 	position: relative;
 	z-index: 200;
-}
-
-body > header.locked
-{
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
 }
 
 body > header h1
@@ -178,7 +188,7 @@ body > header a
 	color: inherit;
 	font-weight: normal;
 	letter-spacing: 1px;
-	margin: 0 1em;
+	margin: 0 1rem;
 }
 
 body > header #title
@@ -193,6 +203,16 @@ body > header #title
 	z-index: -1;
 }
 
+/*body > header #title a:before
+{
+	border: 2px solid #3399cc;
+	content: 'DM';
+	letter-spacing: -2px;
+	margin-right: 0.5rem;
+	padding: 0.4rem;
+	padding-right: 0.5rem;
+}*/
+
 body > header .menu-icon
 {
 	float: left;
@@ -200,6 +220,12 @@ body > header .menu-icon
 }
 
 body > header nav
+{
+	margin: auto;
+	width: 100%;
+}
+
+body > header nav ul
 {
 	display: none;
 	text-transform: lowercase;
@@ -218,7 +244,7 @@ body > main > article, body > main > section
 	letter-spacing: 0;
 	min-height: calc(100% - 4rem);
 	overflow: hidden;
-	padding: 0 1rem;
+	padding: 4rem 1rem 0 1rem;
 	text-align: center;
 }
 
@@ -227,12 +253,6 @@ body > main > section#landing
 	background: url('/assets/images/workspace-900p.jpg') center center;
 	background-size: cover;
 	height: 100%;
-	left: 0;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: -1;
 }
 
 body > main > article .arrow-down, body > main > section .arrow-down
@@ -312,9 +332,45 @@ body > main > article.even pre, body > main > section.even
 		height: 100%;
 	}
 
+	body > header a
+	{
+		transition: color 0.25s;
+		-webkit-transition: color 0.25s;
+	}
+
+	body > header a:hover
+	{
+		color: #66cc99;
+		transition: color 0.25s;
+		-webkit-transition: color 0.25s;
+	}
+
+	body > header a.active
+	{
+		color: #66cc99;
+	}
+
+	body > header #title
+	{
+		float: left;
+		position: relative;
+		width: auto;
+	}
+
+	body > header #title a:hover
+	{
+		color: #121212;
+	}
+
 	body > header > nav
 	{
+		max-width: 60rem;
+	}
+
+	body > header > nav ul
+	{
 		display: inline-block;
+		float: right;
 	}
 
 	body > header nav.nav-left
@@ -334,10 +390,28 @@ body > main > article.even pre, body > main > section.even
 		display: inline-block;
 	}
 
+	body > header.locked
+	{
+		left: 0;
+		margin-top: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
 	body > main > article, body > main > section
 	{
-		padding: 0 10%;
-		text-align: left;
+		/*text-align: left;*/
+	}
+
+	body > main > section#landing
+	{
+		left: 0;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: -1;
 	}
 
 	body > main > article > header, body > main > article > div, body > main > article footer, 
@@ -350,6 +424,11 @@ body > main > article.even pre, body > main > section.even
 	.menu-icon
 	{
 		display: none;
+	}
+
+	.module
+	{
+		padding: 1rem 0;
 	}
 
 	.node

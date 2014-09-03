@@ -28,17 +28,14 @@
 			<div></div>
 			<div></div>
 		</div>
-		<h1 id="title"><a href="/">David Myers</a></h1>
-		<nav class="nav-left">
+		<nav>
+			<h1 id="title"><a href="/" data-section="#landing">David Myers</a></h1>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		</nav>
-		<nav class="nav-right">
-			<ul>
-				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="/contact-me">Contact Me</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#blog">Blog</a></li>
 			</ul>
 		</nav>
 	</header>

@@ -127,10 +127,25 @@ $(document).ready(function ()
 		landing.css('top', (-1 * (scrollTop / 10)));
 	});
 
-	// On click, toggle menu open/close
-	$('body > header').on('click', '.menu-icon', function ()
+	// // On click, toggle menu open/close
+	// $('body > header').on('click', '.menu-icon', function ()
+	// {
+	// 	$(this).toggleFunction(openMenu, closeMenu, $(this));
+	// });
+
+	$('body > header').on('click', 'nav ul a', function (e)
 	{
-		$(this).toggleFunction(openMenu, closeMenu, $(this));
+		e.preventDefault();
+
+		var target = $($(this).attr('href'));
+		var offset = target.offset().top;
+
+		$('body > header a').removeClass('active');
+		$(this).addClass('active');
+
+		$('body').animate({
+			scrollTop: offset
+		}, 1000);
 	});
 
 	// On click, scroll to the next article/section
