@@ -136,7 +136,7 @@ a
 	padding: 1rem;
 }
 
-.node
+.module .node
 {
 	background-color: #66cc99;
 	border-radius: 4px;
@@ -431,11 +431,295 @@ body > main > article.even pre, body > main > section.even
 		padding: 1rem 0;
 	}
 
-	.node
+	.module .node
 	{
 		display: inline-block;
 		margin: 0 1.65%;
 		vertical-align: top;
 		width: 30%;
 	}
+}
+
+
+.showcase
+{
+	float: left;
+}
+
+
+
+.showcase, .showcase *
+{
+	box-sizing: border-box;
+}
+
+.showcase
+{
+	margin: 0;
+	max-width: 30rem;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+/* Set up defaults for maintaining device aspect 
+	 ratios for screens. All are based on 100% as 
+	 width.*/
+.showcase .maintain-ratio
+{
+	height: 0;
+	margin: 0;
+	padding-bottom: 177.7777%; /* Default is 9:16 portrait (mobile-first) */
+	position: relative;
+	width: 100%;
+}
+
+.showcase .filler
+{
+	bottom: 0;
+	left: 0;
+	overflow: visible;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+
+/* Phone specific structure and style */
+.showcase .phone
+{
+	bottom: 0;
+	left: 78%;
+	margin: auto;
+	position: absolute;
+	width: 15%;
+}
+
+.showcase .phone .case
+{
+	background-color: #333;
+	border-radius: 3%;
+	overflow: hidden;
+	padding: 20% 10%;
+}
+
+.showcase .phone .screen
+{
+	background-color: #fff;
+}
+
+
+/* Tablet specific structure and style */
+.showcase .tablet
+{
+	margin-top: -25%;
+	position: relative;
+	width: 30%;
+	z-index: 100;
+}
+
+.showcase .tablet .case
+{
+	background-color: #333;
+	border-radius: 3%;
+	overflow: hidden;
+	padding: 8%;
+}
+
+.showcase .tablet .screen
+{
+	background-color: #fff;
+}
+
+.showcase .tablet .screen .maintain-ratio
+{
+	padding-bottom: 150%; /* 2:3 Change ratio for tablet. Leave in portrait. */
+}
+
+
+/* Desktop specific structure and style */
+.showcase .desktop
+{
+	margin: auto;
+	position: relative;
+	width: 75%;
+}
+
+.showcase .desktop .monitor
+{
+	background-color: #333;
+	border-radius: 3%;
+	overflow: hidden;
+	padding: 5%;
+}
+
+.showcase .desktop .screen
+{
+	background-color: #fff;
+}
+
+.showcase .desktop .screen .maintain-ratio
+{
+	padding-bottom: 56.25%; /* 16:9 Switch to landscape for desktop */
+}
+
+.showcase .desktop .stand
+{
+	background-color: #aeaeae;
+	box-shadow: 0 0.25rem 0.5rem -0.5rem rgba(0, 0, 0, 0.5) inset, 0 -0.25rem 0.5rem -0.5rem rgba(0, 0, 0, 0.5) inset;
+	height: 20%;
+	left: 45%;
+	position: absolute;
+	top: 100%;
+	width: 10%;
+}
+
+.showcase .desktop .base
+{
+	background-color: #aeaeae;
+	border-radius: 0.125rem 0.125rem 0 0;
+	height: 5%;
+	left: 35%;
+	position: absolute;
+	top: 120%;
+	width: 30%;
+}
+
+
+/* Default mobile-first website design and structure. */
+.website
+{
+	background-color: #fff;
+	height: 100%;
+}
+	.website div, .website section, .website header
+	{
+		overflow: hidden;
+	}
+
+.website div.body
+{
+	height: 100%;
+	position: relative;
+}
+
+.website div.body .constraint-wrapper
+{
+	margin: 4% 3%;
+}
+
+.website div.body > header
+{
+	background-color: #fff;
+}
+
+.website div.body > header .title
+{
+	background-color: #66cc99;
+	border-radius: 0.125rem;
+	padding: 7% 0;
+}
+
+.website div.body > div.main > section
+{
+	background-color: #ddffee;
+}
+
+.website div.body > div.main > section:nth-child(even)
+{
+	background-color: #fff;
+}
+
+.website div.body > div.main .about
+{
+	background-color: #66cc99;
+	border-radius: 0.125rem;
+	padding: 25%;
+}
+
+.website div.body > div.main .information-nodes
+{
+	text-align: justify;
+}
+
+.website div.body > div.main .information-nodes .node
+{
+	background-color: #66cc99;
+	border-radius: 0.125rem;
+	float: left;
+	margin-bottom: 4%;
+	padding: 20% 0;
+	width: 48%;
+}
+
+.website div.body div.main .node.space-left
+{
+	margin-left: 2%;
+}
+
+.website div.body div.main .node.space-right
+{
+	margin-right: 2%;
+}
+
+.website div.body div.main .node.space-around
+{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.website div.body > div.main .information-nodes .node.double
+{
+	width: 100%;
+}
+
+.website .accent
+{
+	background-color: #66ccff !important;
+}
+
+
+/* Tablet specific website styles. */
+.tablet .website .title
+{
+	padding: 5% !important;
+}
+
+.tablet .website .about
+{
+	padding: 15% !important;
+}
+
+.tablet .website div.body div.main .node
+{
+	padding: 12%;
+}
+
+
+/* Desktop specific website styles. */
+.desktop .website .constraint-wrapper
+{
+	margin: 1.5% 20% !important;
+}
+
+.desktop .website .title
+{
+	padding: 2.5% !important;
+}
+
+.desktop .website .about
+{
+	padding: 7% !important;
+}
+
+.desktop .website div.body div.main .node
+{
+	padding: 8%;
+	width: 22%;
+}
+
+.desktop .website div.body div.main .node.double
+{
+	width: 48%;
 }
