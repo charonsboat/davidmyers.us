@@ -47,6 +47,7 @@
 	@else
 		{{ HTML::script('assets/vendor/js/jquery-1.11.0.min.js') }}
 		{{ HTML::script('assets/vendor/js/selectivizr-1.0.2.min.js') }}
+		{{ HTML::script('assets/vendor/js/enquire-2.1.2.min.js') }}
 		{{ HTML::script('assets/js/plugins.js') }}
 		{{ HTML::script('assets/js/main.js') }}
 		{{ $customJs or null }}

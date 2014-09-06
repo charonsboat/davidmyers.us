@@ -83,13 +83,17 @@ li.formal
 
 a
 {
-	color: #444;
+	color: #66cc99;
 	font-weight: bold;
 }
 
 .menu-icon
 {
-	margin: 1.5625rem;
+	background-color: #fff;
+	border-radius: 0.125rem;
+	margin: 0.6875rem;
+	padding: 0.75rem;
+	position: fixed;
 	width: 1.5rem;
 }
 	.menu-icon:hover
@@ -146,6 +150,11 @@ a
 	overflow: auto;
 }
 
+.module .node:last-child
+{
+	margin-bottom: 0;
+}
+
 .none
 {
 	display: none !important;
@@ -163,6 +172,23 @@ a
 	margin: 100px auto 200px auto;
 }
 
+
+#about .profile
+{
+	border: 0.25rem solid #66cc99;
+	border-radius: 100%;
+	margin: auto;
+	margin-bottom: 3rem;
+	max-width: 10rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+#about .profile img
+{
+	display: block;
+	width: 100%;
+}
 
 /* ########## Document Header ########## */
 body > header
@@ -213,11 +239,11 @@ body > header #title
 	padding-right: 0.5rem;
 }*/
 
-body > header .menu-icon
+/*body > header .menu-icon
 {
 	float: left;
-	line-height: 4rem;
-}
+	line-height: 3.75rem;
+}*/
 
 body > header nav
 {
@@ -244,7 +270,7 @@ body > main > article, body > main > section
 	letter-spacing: 0;
 	min-height: calc(100% - 4rem);
 	overflow: hidden;
-	padding: 4rem 1rem 0 1rem;
+	padding: 4rem 1rem 3rem 1rem;
 	text-align: center;
 }
 
@@ -282,9 +308,9 @@ article.even h4, section.even h4,
 article:nth-child(even) h5, section:nth-child(even) h5, 
 article.even h5, section.even h5,
 article:nth-child(even) h6, section:nth-child(even) h6, 
-article.even h6, section.even h6,
+article.even h6, section.even h6/*,
 article:nth-child(even) a, section:nth-child(even) a, 
-article.even a, section.even a
+article.even a, section.even a*/
 {
 	color: #444;
 }
@@ -443,7 +469,9 @@ body > main > article.even pre, body > main > section.even
 
 .showcase
 {
-	float: left;
+	/*float: left;*/
+	margin: auto !important;
+	margin-bottom: 3rem !important;
 }
 
 

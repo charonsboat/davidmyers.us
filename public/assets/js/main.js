@@ -91,6 +91,14 @@ $(document).ready(function ()
 		}
 	}
 
+	var clearHeader = function ()
+	{
+		header.removeClass('locked');
+		header.css('margin-top', 0);
+		body.css('margin-top', 0);
+	}
+
+
 	var body = $('body');
 	var header = $('body > header');
 	var windowHeight = window.innerHeight;
@@ -100,32 +108,44 @@ $(document).ready(function ()
 	var landing = $('#landing');
 	var landingHeight = landing.height();
 
-	landing.css('height', landingHeight);
+	enquire.register('screen and (min-width: 700px)', {
 
-	setTopMargin(header, height);
-
-	$(window).resize(function ()
-	{
-		var newHeight = window.innerHeight - rem(4);
-		
-		if (newHeight < height)
+		match : function ()
 		{
-			height = newHeight;
-			distance = height;
+			landing.css('height', landingHeight);
+
+			setTopMargin(header, height);
+
+			$(window).scroll(function ()
+			{
+				setHeader();
+
+				var scrollTop = $(this).scrollTop();
+
+				//landing.css('height', (height + (scrollTop / 3)));
+				landing.css('top', (-1 * (scrollTop / 10)));
+			});
+		},
+
+		unmatch: function ()
+		{
+			$(window).unbind('scroll');
+			clearHeader();
 		}
-
-		setHeader();
 	});
 
-	$(window).scroll(function ()
-	{
-		setHeader();
+	// $(window).resize(function ()
+	// {
+	// 	var newHeight = window.innerHeight - rem(4);
+		
+	// 	if (newHeight < height)
+	// 	{
+	// 		height = newHeight;
+	// 		distance = height;
+	// 	}
 
-		var scrollTop = $(this).scrollTop();
-
-		//landing.css('height', (height + (scrollTop / 3)));
-		landing.css('top', (-1 * (scrollTop / 10)));
-	});
+	// 	setHeader();
+	// });
 
 	// // On click, toggle menu open/close
 	// $('body > header').on('click', '.menu-icon', function ()
