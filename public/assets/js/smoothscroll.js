@@ -12,7 +12,7 @@ window.addEventListener('load', function ()
 	smoothScroll.init({
 		callbackBefore: function ()
 		{
-			document.querySelector('body > header').classList.remove('menu-active');
+			document.body.classList.remove('menu-active');
 		},
 		speed: 750
 	});
