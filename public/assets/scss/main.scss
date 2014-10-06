@@ -1,0 +1,197 @@
+html, body
+{
+	height: 100%;
+}
+
+html
+{
+	font-size: 100%;
+}
+
+body
+{
+	background-attachment: fixed;
+	background-image: url('../images/workspace-900p.jpg');
+	background-size: cover;
+	color: #444;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	text-align: center;
+
+	&.menu-active
+	{
+		overflow: hidden;
+		
+		nav
+		{
+			border-radius: 0;
+			bottom: 0;
+			height: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+header
+{
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	border-top: 2px solid #66cc99;
+	height: 3rem;
+	line-height: 3rem;
+
+	h1
+	{
+		font-size: 1.75rem;
+		line-height: 3rem;
+		margin: 0;
+
+		a
+		{
+			color: #444;
+			font-weight: normal;
+		}
+	}
+
+	#menu
+	{
+		background-color: #fff;
+		border-radius: 1px;
+		left: 0;
+		margin: 0.625rem;
+		padding: 0.5rem;
+		position: fixed;
+		top: 0;
+		width: 1.5rem;
+		z-index: 500;
+
+		div
+		{
+			background-color: #444;
+			height: 0.125rem;
+
+			&:first-child, &.first-child
+			{
+				margin-bottom: 0.25rem;
+			}
+			
+			&:last-child, &.last-child
+			{
+				margin-top: 0.25rem;
+			}
+		}
+
+		&:hover
+		{
+			cursor: pointer;
+		}
+	}
+}
+
+nav
+{
+	background-color: #fff;
+	border-radius: 0.125rem;
+	height: 1.875rem;
+	left: 0.625rem;
+	overflow: hidden;
+	position: fixed;
+	top: 0.625rem;
+	width: 2.5rem;
+	z-index: 450;
+
+	transition: height 0.25s, left 0.25s, top 0.25s, width 0.25s;
+	-webkit-transition: height 0.25s, left 0.25s, top 0.25s, width 0.25s;
+
+	ul
+	{
+		margin-top: 4rem;
+
+		li
+		{
+			line-height: 3rem;
+
+			a
+			{
+				color: #444;
+				display: block;
+			}
+		}
+	}
+}
+
+section
+{
+	background-color: #fff;
+	padding: 4rem 0.5rem;
+
+	h2
+	{
+		letter-spacing: 1px;
+		margin-bottom: 2.5rem;
+	}
+
+	&#home
+	{
+		background-color: transparent;
+		height: 100%;
+	}
+
+	&#about
+	{
+		#profile
+		{
+			border: 0.25rem solid #66cc99;
+			border-radius: 100%;
+			margin: 3rem auto;
+			max-width: 10rem;
+			overflow: hidden;
+		}
+	}
+
+	&:nth-child(even)
+	{
+		background-color: #f4f4f4;
+	}
+}
+
+.container
+{
+	overflow: hidden;
+}
+
+ul
+{
+	list-style: none;
+	margin-bottom: 2.5rem;
+	padding: 0;
+
+	li
+	{
+		padding: 0.25rem;
+	}
+}
+
+img
+{
+	display: block;
+	max-width: 100%;
+}
+
+a
+{
+	color: #66cc99;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 55rem) {
+	/* Desktop Styling */
+	.container
+	{
+		margin: auto;
+		max-width: 55rem;
+	}
+}
