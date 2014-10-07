@@ -13,20 +13,22 @@
 </head>
 <body>
 	<header>
-		<h1>{{ HTML::link('/', 'David Myers') }}</h1>
-		<div id="menu">
-			<div></div>
-			<div></div>
-			<div></div>
+		<div class="container">
+			<h1>{{ HTML::link('/', 'David Myers') }}</h1>
+			<div id="menu">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="./#home" data-scroll>Home</a></li>
+					<li><a href="./#about" data-scroll>About</a></li>
+					<li><a href="./#skills" data-scroll>Skills</a></li>
+					<li><a href="./#contact" data-scroll>Contact</a></li>
+				</ul>
+			</nav>
 		</div>
-		<nav>
-			<ul>
-				<li><a href="./#home" data-scroll>Home</a></li>
-				<li><a href="./#about" data-scroll>About</a></li>
-				<li><a href="./#skills" data-scroll>Skills</a></li>
-				<li><a href="./#contact" data-scroll>Contact</a></li>
-			</ul>
-		</nav>
 	</header>
 
 	@if (Session::has('flash_notice'))

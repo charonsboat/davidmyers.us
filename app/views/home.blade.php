@@ -56,4 +56,12 @@
 	</div>
 </section>
 
+<section id="contact">
+	<div class="container">
+		<h2>Contact</h2>
+
+		<h3>self <span class="accent">[at]</span> davidmyers.us</h3>
+	</div>
+</section>
+
 @stop
