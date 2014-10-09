@@ -63,7 +63,9 @@ body {
       width: 0;
       z-index: 450;
       transition: height 0.25s, left 0.25s, top 0.25s, width 0.25s;
-      -webkit-transition: height 0.25s, left 0.25s, top 0.25s, width 0.25s; }
+      -webkit-transition: height 0.25s, left 0.25s, top 0.25s, width 0.25s;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0); }
       body > header nav ul {
         margin-top: 4rem; }
         body > header nav ul li {
