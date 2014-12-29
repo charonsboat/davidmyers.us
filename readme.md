@@ -3,6 +3,18 @@
 This repository houses my personal website, portfolio, and blog.
 
 
+##install application
+
+First, you need to run a few commands:
+
+```
+git clone https://github.com/drmyersii/davidmyers.us.git www
+cd www
+```
+
+Next, copy ```.env.default.php``` into a new file called ```.env.php``` and fill it with your website credentials. Finish up by running ```composer install``` and make sure your server root is pointing to ```www/public```.
+
+
 ##author
 
 David Myers [drmyersii]
@@ -31,18 +43,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-##install application
-
-First, you need to run a few commands:
-
-```
-git clone https://github.com/drmyersii/davidmyers.us.git www
-cd www
-composer install
-```
-
-Next, copy ```.env.default.php``` into a new file called ```.env.php``` and 
-fill it with your website credentials. Make sure your server root is pointing 
-to ```www/public``` and you should be good to go!
