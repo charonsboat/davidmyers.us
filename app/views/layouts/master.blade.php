@@ -26,6 +26,7 @@
 					<li><a href="./#about" data-scroll>About</a></li>
 					<li><a href="./#skills" data-scroll>Skills</a></li>
 					<li><a href="./#contact" data-scroll>Contact</a></li>
+					<li><a href="./blog">Blog</a></li>
 				</ul>
 			</nav>
 		</div>
